@@ -1,0 +1,11 @@
+{
+	"Name": "Slack 미확인 알림",
+	"Description": "키에 Slack 미확인 알림 배지를 표시합니다",
+	"Actions": [
+		{
+			"Name": "미확인 배지",
+			"Tooltip": "Slack 미확인 알림 배지를 표시합니다. 누르면 Slack 을 엽니다."
+		}
+	],
+	"Localization": {}
+}

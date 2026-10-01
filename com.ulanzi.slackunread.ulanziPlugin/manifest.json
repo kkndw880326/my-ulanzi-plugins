@@ -1,0 +1,38 @@
+{
+  "Version": "1.0.0",
+  "Author": "kkndw880326",
+  "Name": "Slack Unread",
+  "Description": "Show Slack unread badge on a key",
+  "Icon": "assets/icons/pluginIcon.svg",
+  "Category": "Slack Unread",
+  "CategoryIcon": "assets/icons/categoryIcon.svg",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "UUID": "com.ulanzi.ulanzistudio.slackunread",
+  "Actions": [
+    {
+      "Name": "Unread Badge",
+      "Icon": "assets/icons/actionIcon.svg",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Default",
+          "Image": "assets/icons/actionIcon.svg"
+        }
+      ],
+      "Tooltip": "Show Slack unread badge. Press to open Slack.",
+      "UUID": "com.ulanzi.ulanzistudio.slackunread.badge",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Keypad"]
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    }
+  ],
+  "Software": {
+    "MinVersion": "2.1.4"
+  }
+}

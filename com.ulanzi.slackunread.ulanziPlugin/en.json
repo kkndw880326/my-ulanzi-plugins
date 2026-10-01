@@ -1,0 +1,11 @@
+{
+	"Name": "Slack Unread",
+	"Description": "Show Slack unread badge on a key",
+	"Actions": [
+		{
+			"Name": "Unread Badge",
+			"Tooltip": "Show Slack unread badge. Press to open Slack."
+		}
+	],
+	"Localization": {}
+}
