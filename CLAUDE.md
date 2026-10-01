@@ -31,6 +31,14 @@ com.ulanzi.{pluginName}.ulanziPlugin/
 - Ulanzi Studio에 의존하는 코드는 `app.js`에 두고, 테스트할 수 있는 순수 로직은 별도 모듈로 분리한다.
 - 키 아이콘은 SVG를 생성한 뒤 `$UD.setBaseDataIcon(context, data)`로 그린다.
 
+### 키별 설정이 필요한 경우 (참고 구현: `com.ulanzi.claudecode.ulanziPlugin/`)
+
+- [plugin-common-html](https://github.com/UlanziTechnology/plugin-common-html)을 플러그인 루트의 `libs/`에 복사하고, 설정 화면은 `property-inspector/{actionName}/inspector.html` + `inspector.js`로 만든다. manifest의 액션에 `PropertyInspectorPath`를 지정한다.
+- 설정 화면: `$UD.connect(액션 UUID)` → `onAdd`/`onParamFromApp`에서 `Utils.setFormValue`로 값을 채우고, 변경되면 `$UD.sendParamFromPlugin(Utils.getFormValue(form))`로 보낸다.
+- 메인 서비스: `onAdd`/`onParamFromApp`/`onParamFromPlugin`의 `jsn.param`으로 설정을 받아 `ACTION_CACHES[context]`에 저장한다.
+- 설정 화면의 문구는 `data-localize`로 표시하고, 번역은 `en.json`/`ko_KR.json`의 `Localization`에 넣는다.
+- 폴더나 파일 선택은 `$UD.selectFolderDialog()`/`selectFileDialog()`를 호출하고, 결과는 `onSelectdialog`의 `jsn.path`로 받는다.
+
 ## 명명 규칙
 
 - 폴더명: `com.ulanzi.{pluginName}.ulanziPlugin`
@@ -42,6 +50,7 @@ com.ulanzi.{pluginName}.ulanziPlugin/
 ## SDK / 레퍼런스
 
 - Node SDK: [UlanziTechnology/plugin-common-node](https://github.com/UlanziTechnology/plugin-common-node)를 `plugin/ulanzi-api/`에 복사해서 사용한다 (Apache-2.0). 타입은 `plugin/ulanzi-api/apiTypes.d.ts`를 참고한다.
+- HTML SDK(설정 화면용): [UlanziTechnology/plugin-common-html](https://github.com/UlanziTechnology/plugin-common-html)을 `libs/`에 복사해서 사용한다 (Apache-2.0). API 목록은 이 저장소의 README를 참고한다.
 - manifest 레퍼런스: [UlanziDeckPlugin-SDK/manifest.md](https://github.com/UlanziTechnology/UlanziDeckPlugin-SDK/blob/main/manifest.md)
 - 대상 플랫폼은 기본적으로 macOS다 (manifest `OS`: `mac`).
 

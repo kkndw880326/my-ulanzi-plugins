@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
+  <title>New Claude Code Session</title>
+  <link rel="stylesheet" href="../../libs/css/uspi.css">
+  <style>
+    .uspi-file-label img {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="uspi-wrapper hidden">
+
+    <form id="property-inspector">
+
+      <div type="file" class="uspi-item">
+        <div class="uspi-item-label" data-localize>Folder</div>
+        <div class="uspi-item-value">
+          <span class="uspi-file-info" id="folder_info" data-localize>Choose a folder</span>
+          <label class="uspi-file-label" id="folder_picker">
+            <img src="../../libs/assets/u_folder.svg" alt="">
+          </label>
+        </div>
+        <input type="hidden" id="folder" name="folder">
+      </div>
+
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Open with</div>
+        <select class="uspi-item-value" id="openMode" name="openMode">
+          <option value="auto" data-localize="Claude app (Terminal if it fails)" selected>Claude app (Terminal if it fails)</option>
+          <option value="terminal" data-localize="Always Terminal">Always Terminal</option>
+        </select>
+      </div>
+
+    </form>
+
+  </div>
+
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+
+  <script src="./inspector.js"></script>
+</body>
+
+</html>

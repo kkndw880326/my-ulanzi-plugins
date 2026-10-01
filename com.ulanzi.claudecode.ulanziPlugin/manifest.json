@@ -1,0 +1,54 @@
+{
+  "Version": "1.0.0",
+  "Author": "kkndw880326",
+  "Name": "Claude",
+  "Description": "Start a new Claude chat or Claude Code session",
+  "Icon": "assets/icons/pluginIcon.svg",
+  "Category": "Claude",
+  "CategoryIcon": "assets/icons/categoryIcon.svg",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "UUID": "com.ulanzi.ulanzistudio.claudecode",
+  "Actions": [
+    {
+      "Name": "New Code Session",
+      "Icon": "assets/icons/actionIcon.svg",
+      "PropertyInspectorPath": "property-inspector/newsession/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Default",
+          "Image": "assets/icons/actionIcon.svg"
+        }
+      ],
+      "Tooltip": "Start a new Claude Code session in the chosen folder.",
+      "UUID": "com.ulanzi.ulanzistudio.claudecode.newsession",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Keypad"]
+    },
+    {
+      "Name": "New Chat",
+      "Icon": "assets/icons/chatIcon.svg",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Default",
+          "Image": "assets/icons/chatIcon.svg"
+        }
+      ],
+      "Tooltip": "Start a new Claude chat.",
+      "UUID": "com.ulanzi.ulanzistudio.claudecode.newchat",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Keypad"]
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    }
+  ],
+  "Software": {
+    "MinVersion": "2.1.4"
+  }
+}

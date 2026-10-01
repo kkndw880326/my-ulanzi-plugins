@@ -1,0 +1,22 @@
+{
+	"Name": "Claude",
+	"Description": "Start a new Claude chat or Claude Code session",
+	"Actions": [
+		{
+			"Name": "New Code Session",
+			"Tooltip": "Start a new Claude Code session in the chosen folder."
+		},
+		{
+			"Name": "New Chat",
+			"Tooltip": "Start a new Claude chat."
+		}
+	],
+	"Localization": {
+		"Folder": "Folder",
+		"Choose a folder": "Choose a folder",
+		"Open with": "Open with",
+		"Claude app (Terminal if it fails)": "Claude app (Terminal if it fails)",
+		"Always Terminal": "Always Terminal",
+		"No folder": "No folder"
+	}
+}

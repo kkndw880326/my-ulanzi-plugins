@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "claudecode-ulanzi-plugin",
+  "description": "Ulanzi Studio plugin that starts a new Claude Code session in a chosen folder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node plugin/app.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ws": "8.18.0"
+  }
+}

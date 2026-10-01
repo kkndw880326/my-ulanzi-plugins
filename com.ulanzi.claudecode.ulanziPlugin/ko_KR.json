@@ -1,0 +1,22 @@
+{
+	"Name": "Claude",
+	"Description": "새 Claude 채팅이나 Claude Code 세션을 시작합니다",
+	"Actions": [
+		{
+			"Name": "새 Claude Code 세션",
+			"Tooltip": "선택한 폴더에서 새 Claude Code 세션을 시작합니다."
+		},
+		{
+			"Name": "새 채팅",
+			"Tooltip": "새 Claude 채팅을 시작합니다."
+		}
+	],
+	"Localization": {
+		"Folder": "폴더",
+		"Choose a folder": "폴더를 선택하세요",
+		"Open with": "열기 방식",
+		"Claude app (Terminal if it fails)": "Claude 앱 (실패 시 터미널)",
+		"Always Terminal": "항상 터미널",
+		"No folder": "폴더 미지정"
+	}
+}
